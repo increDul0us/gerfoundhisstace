@@ -30,34 +30,34 @@ const CountdownSection = () => {
   ];
 
   return (
-    <section id="countdown" className="bg-lavender-50 py-20">
+    <section id="countdown" className="bg-lavender-50 py-14 sm:py-20">
       <div
         ref={ref}
-        className={`container mx-auto px-6 text-center transition-all duration-700 ${
+        className={`container mx-auto px-4 text-center transition-all duration-700 sm:px-6 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+        <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold sm:text-sm sm:tracking-[0.2em]">
           Counting down to forever ✨
         </p>
-        <h2 className="mt-3 font-display text-3xl font-bold text-gray-800 md:text-4xl">
+        <h2 className="mt-2 font-display text-2xl font-bold text-gray-800 sm:mt-3 sm:text-3xl md:text-4xl">
           {WEDDING_DATE_LABEL}
         </h2>
-        <p className="mx-auto mt-3 max-w-md text-gray-500">
+        <p className="mx-auto mt-2 max-w-md text-sm text-gray-500 sm:mt-3 sm:text-base">
           We literally can't wait. Neither should you!
         </p>
 
-        <div className="mx-auto mt-10 grid max-w-3xl grid-cols-2 gap-4 md:grid-cols-4">
+        <div className="mx-auto mt-6 grid max-w-3xl grid-cols-2 gap-3 sm:mt-10 sm:gap-4 md:grid-cols-4">
           {units.map((unit) => (
             <div
               key={unit.label}
-              className="group rounded-3xl border border-lavender-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-lavender-100"
+              className="group rounded-2xl border border-lavender-100 bg-white p-4 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-lavender-100 sm:rounded-3xl sm:p-6"
             >
-              <span className="mb-2 block text-2xl">{unit.emoji}</span>
-              <span className="block font-display text-4xl font-bold text-lavender-500 sm:text-5xl">
+              <span className="mb-1 block text-lg sm:mb-2 sm:text-2xl">{unit.emoji}</span>
+              <span className="block font-display text-3xl font-bold text-lavender-500 sm:text-5xl">
                 {String(unit.value).padStart(2, "0")}
               </span>
-              <span className="mt-1 block text-xs font-semibold uppercase tracking-wider text-gray-400">
+              <span className="mt-1 block text-[10px] font-semibold uppercase tracking-wider text-gray-400 sm:text-xs">
                 {unit.label}
               </span>
             </div>
