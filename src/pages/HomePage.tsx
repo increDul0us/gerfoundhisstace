@@ -11,6 +11,7 @@ import RSVPSection from "../components/wedding/RSVPSection";
 import FAQSection from "../components/wedding/FAQSection";
 import WelcomeSplash from "../components/wedding/WelcomeSplash";
 import MusicPlayer from "../components/wedding/MusicPlayer";
+import ScrollButton from "../components/wedding/ScrollButton";
 import { COUPLE_NAME_1, COUPLE_NAME_2, HASHTAG, CONTACT_EMAIL, WEDDING_DATE_LABEL, WEDDING_LOCATION_LABEL } from "../lib/wedding";
 import { Heart } from "lucide-react";
 
@@ -36,6 +37,7 @@ const HomePage = () => {
 
       {/* Floating music player */}
       <MusicPlayer autoPlay />
+      <ScrollButton />
 
       {/* Footer */}
       <footer className="border-t border-lavender-100 bg-white py-12 text-center">
