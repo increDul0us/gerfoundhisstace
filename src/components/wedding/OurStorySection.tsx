@@ -42,7 +42,7 @@ const OurStorySection = () => {
               <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
                 Somewhere between debating song choices, disagreeing over food, and 
                 having our fair share of silly arguments, we realise that building a 
-                life together is really about making a hundred little decisions and 
+                life together is really about making a hundred decisions and 
                 choosing each other's happiness through them all.
               </p>
             </div>
