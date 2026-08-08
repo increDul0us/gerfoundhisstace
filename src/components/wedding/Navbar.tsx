@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Heart } from "lucide-react";
 
 const navItems = [
-  { label: "Home", href: "#home" },
+  { label: "Home", href: "/" },
   { label: "Our Story", href: "#our-story" },
   { label: "Gallery", href: "#gallery" },
   { label: "The Day", href: "#the-day" },
@@ -30,7 +30,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <a
-          href="#home"
+          href="/"
           className="flex items-center gap-2 font-display text-xl font-semibold text-lavender-600"
         >
           S <Heart className="h-4 w-4 fill-gold text-gold" /> G
