@@ -16,6 +16,10 @@ const faqs = [
     a: "Oh yes. Dinner, drinks, cake — the works.",
   },
   {
+  {
+    q: "Do I need to RSVP individually?",
+    a: "Yes — each guest needs to submit their own RSVP, even if you're coming as a couple or family. This helps us get an accurate headcount.",
+  },
     q: "Is there parking?",
     a: "Yes, parking is available at the venue.",
   },
