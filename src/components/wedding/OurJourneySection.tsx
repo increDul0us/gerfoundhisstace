@@ -3,7 +3,7 @@ import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 const milestones = [
   {
-    date: "September 24, 2023",
+    date: "September 23, 2023",
     title: "We Connected",
     description: "We connected.",
     icon: Sparkles,
