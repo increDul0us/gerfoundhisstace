@@ -23,10 +23,6 @@ const faqs = [
     q: "Can I take photos?",
     a: "During the ceremony, we'd love for you to be present (unplugged ceremony). But at the reception? Snap away! Use #GerfoundhisStace so we can find them!",
   },
-  {
-    q: "What time should I arrive?",
-    a: "Please arrive 15-20 minutes before the ceremony starts. Times will be confirmed closer to the date.",
-  },
 ];
 
 const FAQSection = () => {

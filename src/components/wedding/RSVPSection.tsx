@@ -38,7 +38,7 @@ const RSVPSection = () => {
               We can't wait to celebrate with you. Get ready for an amazing day!
             </p>
             <p className="mt-2 text-lg font-bold text-lavender-500">
-              We'll save you a seat! 🪑
+              We'll save you a seat!
             </p>
             <Heart className="mx-auto mt-4 h-8 w-8 animate-float fill-lavender-400 text-lavender-400" />
           </div>

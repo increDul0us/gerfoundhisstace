@@ -33,7 +33,7 @@ const GalleryPreview = () => {
             Our Gallery
           </h2>
           <p className="mx-auto mt-3 max-w-md text-gray-500">
-            A few of our favourite moments — the real ones, not the posed ones 😄
+            A few of our favourite moments — the real ones, not the posed ones
           </p>
         </div>
 
