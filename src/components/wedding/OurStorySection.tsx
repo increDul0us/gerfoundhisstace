@@ -50,9 +50,11 @@ const OurStorySection = () => {
 
             <div className="rounded-2xl border border-gold-100 bg-gold-50/50 p-4 sm:p-6">
               <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-                What started as two people finding their way to each other has become 
-                a journey filled with love, laughter, memories, and countless little 
-                moments that we'll cherish forever.
+                Somewhere between debating song choices, disagreeing over food, and 
+                having our fair share of silly arguments, we realised that building a 
+                life together is really about making a hundred little decisions 
+                choosing each other's happiness through every single one, and trusting 
+                God to guide us along the way.
               </p>
             </div>
 
