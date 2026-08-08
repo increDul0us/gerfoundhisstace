@@ -16,7 +16,6 @@ import photo10 from "../assets/gallery/photo-10.jpg";
 import photo11 from "../assets/gallery/photo-11.jpg";
 import photo12 from "../assets/gallery/photo-12.jpg";
 import photo13 from "../assets/gallery/photo-13.jpg";
-import photo14 from "../assets/gallery/photo-14.jpg";
 import photo15 from "../assets/gallery/photo-15.jpg";
 import photo16 from "../assets/gallery/photo-16.jpg";
 import photo17 from "../assets/gallery/photo-17.jpg";
@@ -36,7 +35,6 @@ const sets: PhotoSet[] = [
       { src: photo11, alt: "Smiling with football" },
       { src: photo12, alt: "Foreheads together" },
       { src: photo13, alt: "Sitting together with football" },
-      { src: photo14, alt: "Kiss in jerseys" },
       { src: photo15, alt: "Back to back" },
     ],
   },
