@@ -40,11 +40,10 @@ const OurStorySection = () => {
           <div className="space-y-4 sm:space-y-6">
             <div className="rounded-2xl border border-lavender-100 bg-lavender-50/50 p-4 sm:p-6">
               <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-                Somewhere between debating song choices, 
-                disagreeing over food, and having our fair share of silly arguments, 
-                we realised that building a life together is really about making a 
-                thousand little decisions — and somehow, still choosing each other 
-                through all of them.
+                Somewhere between debating song choices, disagreeing over food, and 
+                having our fair share of silly arguments, we realise that building a 
+                life together is really about making a hundred little decisions and 
+                choosing each other's happiness through them all.
               </p>
             </div>
 
@@ -52,8 +51,8 @@ const OurStorySection = () => {
               <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
                 Through the ups and downs, the laughter and the chaos, we've created 
                 countless memories and grown together along the way. It may not always 
-                be perfect, but it's our kind of perfect — and we wouldn't want to do 
-                this adventure with anyone else.
+                be perfect, but it's our kind of perfect — and we wouldn't want to 
+                do this adventure with anyone else.
               </p>
             </div>
 
