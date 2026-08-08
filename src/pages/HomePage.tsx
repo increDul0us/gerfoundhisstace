@@ -2,6 +2,7 @@ import Navbar from "../components/wedding/Navbar";
 import HeroSection from "../components/wedding/HeroSection";
 import CountdownSection from "../components/wedding/CountdownSection";
 import OurStorySection from "../components/wedding/OurStorySection";
+import OurSongSection from "../components/wedding/OurSongSection";
 import GalleryPreview from "../components/wedding/GalleryPreview";
 import QuoteSection from "../components/wedding/QuoteSection";
 import EventSchedule from "../components/wedding/EventSchedule";
@@ -17,6 +18,7 @@ const HomePage = () => {
       <HeroSection />
       <CountdownSection />
       <OurStorySection />
+      <OurSongSection />
       <GalleryPreview />
       <QuoteSection />
       <EventSchedule />
