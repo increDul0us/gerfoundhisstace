@@ -40,8 +40,8 @@ const OurStorySection = () => {
           <div className="space-y-6">
             <div className="rounded-2xl border border-lavender-100 bg-lavender-50/50 p-6">
               <p className="text-gray-600 leading-relaxed">
-                From matching PJs and soccer nights to playful arguments 
-                over the remote, we've shared the kind of moments that make life ours. 
+                From matching PJs to late-night soccer matches on TV and playful 
+                arguments over the remote, we've shared the kind of moments that make life ours. 
                 Through the ups and downs, the laughter and the challenges, we've grown 
                 together, held on to each other, and found our way through it all.
               </p>
