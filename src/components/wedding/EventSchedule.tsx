@@ -62,10 +62,15 @@ const EventSchedule = () => {
                   {event.venue}
                 </p>
 
-                <div className="flex items-start gap-2 text-sm text-gray-500">
+                <a
+                  href={event.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2 text-sm text-gray-500 transition-colors hover:text-lavender-500"
+                >
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-lavender-400" />
-                  <span>{event.address}</span>
-                </div>
+                  <span className="underline decoration-dotted underline-offset-2">{event.address}</span>
+                </a>
 
                 <p className="pt-2 text-sm text-gray-600 leading-relaxed">
                   {event.description}
