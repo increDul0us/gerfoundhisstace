@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: "Will there be food and drinks?",
-    a: "Oh yes. Dinner, drinks, cake — the works. Let us know about any dietary needs in your RSVP!",
+    a: "Oh yes. Dinner, drinks, cake — the works.",
   },
   {
     q: "Is there parking?",
