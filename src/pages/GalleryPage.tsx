@@ -22,14 +22,13 @@ import photo17 from "../assets/gallery/photo-17.jpg";
 
 interface PhotoSet {
   title: string;
-  emoji: string;
   photos: { src: string; alt: string }[];
 }
 
 const sets: PhotoSet[] = [
   {
     title: "On the Pitch",
-    emoji: "⚽",
+
     photos: [
       { src: photo11, alt: "Smiling with football" },
       { src: photo12, alt: "Foreheads together" },
@@ -40,7 +39,7 @@ const sets: PhotoSet[] = [
   },
   {
     title: "Cozy Vibes",
-    emoji: "🛋️",
+
     photos: [
       { src: photo3, alt: "Matching PJs" },
       { src: photo7, alt: "Playful moment" },
@@ -52,7 +51,6 @@ const sets: PhotoSet[] = [
   },
   {
     title: "Us Being Us",
-    emoji: "",
     photos: [
       { src: photo1, alt: "Together" },
       { src: photo2, alt: "Couple portrait" },
@@ -91,7 +89,6 @@ const GalleryPage = () => {
         {sets.map((set, setIdx) => (
           <div key={setIdx} className="mb-16 last:mb-0">
             <h2 className="mb-6 flex items-center gap-2 font-display text-2xl font-bold text-gray-800">
-              <span className="text-3xl">{set.emoji}</span>
               {set.title}
             </h2>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4">
