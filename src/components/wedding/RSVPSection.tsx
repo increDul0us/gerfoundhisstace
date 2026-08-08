@@ -13,6 +13,7 @@ const RSVPSection = () => {
     name: "",
     email: "",
     attending: "",
+    events: "",
     guests: "1",
     message: "",
   });
@@ -33,6 +34,7 @@ const RSVPSection = () => {
           name: formData.name,
           email: formData.email,
           attending: formData.attending === "yes" ? "Yes" : "No",
+          events: formData.events || "N/A",
           invite_type: "Ceremony + Dinner",
           guests: formData.guests,
           message: formData.message || "(no message)",
@@ -166,6 +168,40 @@ const RSVPSection = () => {
               ))}
             </div>
           </div>
+
+          {formData.attending === "yes" && (
+            <div>
+              <label className="mb-1.5 block text-sm font-semibold text-gray-700">
+                Which events will you attend? *
+              </label>
+              <div className="flex flex-col gap-2 sm:flex-row sm:gap-3">
+                {[
+                  { value: "both", label: "Ceremony + Dinner", bg: "bg-lavender-50 border-lavender-400 text-lavender-600" },
+                  { value: "ceremony", label: "Ceremony only", bg: "bg-gold-50 border-gold-300 text-gold-dark" },
+                ].map((opt) => (
+                  <label
+                    key={opt.value}
+                    className={`flex flex-1 cursor-pointer items-center justify-center rounded-xl border-2 px-4 py-3 text-sm font-semibold transition-all ${
+                      formData.events === opt.value
+                        ? opt.bg
+                        : "border-gray-200 bg-white text-gray-400 hover:border-lavender-200"
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name="events"
+                      value={opt.value}
+                      checked={formData.events === opt.value}
+                      onChange={handleChange}
+                      className="sr-only"
+                      required
+                    />
+                    {opt.label}
+                  </label>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div>
             <label className="mb-1.5 block text-sm font-semibold text-gray-700">
