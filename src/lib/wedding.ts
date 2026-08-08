@@ -9,7 +9,7 @@ export const WEDDING_DATE_LABEL = "Saturday, 28 November 2026";
 export const WEDDING_LOCATION_LABEL = "Singapore";
 
 export const CEREMONY = {
-  time: "TBD",
+  time: "10:00 AM (please be seated by 9:30 AM)",
   title: "The Ceremony",
   venue: "Church of Our Lady of Perpetual Succour (OLPS)",
   address: "31 Siglap Hill, Singapore 456085",
@@ -18,7 +18,7 @@ export const CEREMONY = {
 };
 
 export const RECEPTION = {
-  time: "TBD",
+  time: "6:30 PM (please be seated by 6:00 PM)",
   title: "The Party",
   venue: "Singapore Futsing Association",
   address: "2 Allenby Road #02-01, Singapore 209973",
