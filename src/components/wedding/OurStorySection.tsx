@@ -42,8 +42,8 @@ const OurStorySection = () => {
               <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
                 Somewhere between debating song choices, disagreeing over food, and 
                 having our fair share of silly arguments, we realise that building a 
-                life together is really about making a hundred decisions and 
-                choosing each other's happiness through them all.
+                life together is really about making a hundred little decisions 
+                choosing each other's happiness through every single one, and trusting God to guide us along the way.
               </p>
             </div>
 
