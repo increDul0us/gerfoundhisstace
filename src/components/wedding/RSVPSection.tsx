@@ -28,11 +28,12 @@ const RSVPSection = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
-          subject: `Wedding RSVP: ${formData.name} — ${formData.attending === "yes" ? "Attending" : "Not attending"}`,
+          subject: `Wedding RSVP (Full Day): ${formData.name} — ${formData.attending === "yes" ? "Attending" : "Not attending"}`,
           from_name: "Wedding RSVP",
           name: formData.name,
           email: formData.email,
           attending: formData.attending === "yes" ? "Yes" : "No",
+          invite_type: "Ceremony + Dinner",
           guests: formData.guests,
           message: formData.message || "(no message)",
         }),
