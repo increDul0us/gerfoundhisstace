@@ -40,7 +40,7 @@ const OurStorySection = () => {
           <div className="space-y-6">
             <div className="rounded-2xl border border-lavender-100 bg-lavender-50/50 p-6">
               <p className="text-gray-600 leading-relaxed">
-                Somewhere between choosing house materials, debating song choices, 
+                Somewhere between debating song choices, 
                 disagreeing over food, and having our fair share of silly arguments, 
                 we realised that building a life together is really about making a 
                 thousand little decisions — and somehow, still choosing each other 
