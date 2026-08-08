@@ -68,6 +68,14 @@ export default {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
         },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(184,157,252,0.4)" },
+          "50%": { boxShadow: "0 0 16px 8px rgba(184,157,252,0.25)" },
+        },
+        "confetti-fall": {
+          "0%": { transform: "translateY(-40px) rotate(0deg)", opacity: "1" },
+          "100%": { transform: "translateY(100vh) rotate(360deg)", opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -76,6 +84,8 @@ export default {
         "fade-in": "fade-in 0.8s ease-out forwards",
         float: "float 3s ease-in-out infinite",
         "spin-slow": "spin-slow 8s linear infinite",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "confetti-fall": "confetti-fall linear forwards",
       },
     },
   },

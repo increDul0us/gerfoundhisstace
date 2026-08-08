@@ -1,6 +1,53 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Heart, Send } from "lucide-react";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+
+const CONFETTI_EMOJIS = ["🎉", "💜", "🌸", "✨", "💛", "🎊", "💍", "🥂", "🌟", "💝"];
+
+interface ConfettiPiece {
+  id: number;
+  emoji: string;
+  left: number;
+  animDuration: number;
+  delay: number;
+  size: number;
+}
+
+const ConfettiOverlay = () => {
+  const [pieces, setPieces] = useState<ConfettiPiece[]>([]);
+
+  useEffect(() => {
+    const generated = Array.from({ length: 30 }, (_, i) => ({
+      id: i,
+      emoji: CONFETTI_EMOJIS[i % CONFETTI_EMOJIS.length],
+      left: Math.random() * 100,
+      animDuration: 2.5 + Math.random() * 2,
+      delay: Math.random() * 1.5,
+      size: 18 + Math.floor(Math.random() * 20),
+    }));
+    setPieces(generated);
+  }, []);
+
+  return (
+    <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">
+      {pieces.map((p) => (
+        <span
+          key={p.id}
+          className="absolute top-0 animate-confetti-fall"
+          style={{
+            left: `${p.left}%`,
+            fontSize: `${p.size}px`,
+            animationDuration: `${p.animDuration}s`,
+            animationDelay: `${p.delay}s`,
+            animationFillMode: "forwards",
+          }}
+        >
+          {p.emoji}
+        </span>
+      ))}
+    </div>
+  );
+};
 
 const RSVPSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -28,6 +75,7 @@ const RSVPSection = () => {
   if (submitted) {
     return (
       <section id="rsvp" className="bg-lavender-50 py-24">
+        <ConfettiOverlay />
         <div className="container mx-auto px-6 text-center">
           <div className="mx-auto max-w-md rounded-3xl border border-lavender-200 bg-white p-10 shadow-lg">
             <span className="mb-4 block text-5xl">🎉</span>
@@ -36,6 +84,9 @@ const RSVPSection = () => {
             </h3>
             <p className="mt-3 text-gray-500">
               We can't wait to celebrate with you. Get ready for an amazing day!
+            </p>
+            <p className="mt-2 text-lg font-bold text-lavender-500">
+              We'll save you a seat! 🪑
             </p>
             <Heart className="mx-auto mt-4 h-8 w-8 animate-float fill-lavender-400 text-lavender-400" />
           </div>
