@@ -5,7 +5,7 @@ const milestones = [
   {
     date: "September 23, 2023",
     title: "We Connected",
-    description: "We connected.",
+    description: "The moment it all began — two people finding their way to each other.",
     icon: Sparkles,
     color: "text-lavender-500",
     bg: "bg-lavender-50",
@@ -14,7 +14,7 @@ const milestones = [
   {
     date: "September 29, 2023",
     title: "First Date",
-    description: "We first met.",
+    description: "Five days later, we knew we had to see each other again.",
     icon: Heart,
     color: "text-pink-500",
     bg: "bg-pink-50",
@@ -23,7 +23,7 @@ const milestones = [
   {
     date: "February 14, 2025",
     title: "First Trip",
-    description: "Valentine's Day trip together.",
+    description: "Our first adventure together — making memories far from home.",
     icon: MapPin,
     color: "text-gold-dark",
     bg: "bg-gold-50",
@@ -32,7 +32,7 @@ const milestones = [
   {
     date: "October 25, 2025",
     title: "The Proposal",
-    description: "The day she said YES!",
+    description: "He asked. She said yes. The rest is history.",
     icon: Gift,
     color: "text-lavender-600",
     bg: "bg-lavender-50",
@@ -41,7 +41,7 @@ const milestones = [
   {
     date: "January 31, 2026",
     title: "The Engagement",
-    description: "When we met all our families and celebrated together.",
+    description: "Making it official with family and friends by our side.",
     icon: Calendar,
     color: "text-gold",
     bg: "bg-gold-50",
