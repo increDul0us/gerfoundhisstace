@@ -54,9 +54,9 @@ const OurStorySection = () => {
                 The Adventure 🌍
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                From matching PJs and morning coffee to playful arguments over the 
-                remote — every moment has been an adventure. We've laughed more than 
-                we thought possible, and we're just getting started.
+                From matching PJs and late-night hangs to soccer nights and playful 
+                arguments over the remote — every moment has been an adventure. We've 
+                laughed more than we thought possible, and we're just getting started.
               </p>
             </div>
 
