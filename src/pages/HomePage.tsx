@@ -8,7 +8,7 @@ import EventSchedule from "../components/wedding/EventSchedule";
 import RSVPSection from "../components/wedding/RSVPSection";
 import FAQSection from "../components/wedding/FAQSection";
 import { COUPLE_NAME_1, COUPLE_NAME_2, HASHTAG, CONTACT_EMAIL, WEDDING_DATE_LABEL, WEDDING_LOCATION_LABEL } from "../lib/wedding";
-import { Heart, Instagram } from "lucide-react";
+import { Heart } from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -49,7 +49,12 @@ const HomePage = () => {
               aria-label="Instagram"
               className="flex h-9 w-9 items-center justify-center rounded-full bg-lavender-100 text-lavender-500 transition-all hover:bg-lavender-400 hover:text-white"
             >
-              <Instagram className="h-4 w-4" />
+              {/* Instagram icon SVG */}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
             </a>
           </div>
 
