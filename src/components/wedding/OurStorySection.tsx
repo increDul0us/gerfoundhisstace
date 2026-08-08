@@ -40,19 +40,19 @@ const OurStorySection = () => {
           <div className="space-y-4 sm:space-y-6">
             <div className="rounded-2xl border border-lavender-100 bg-lavender-50/50 p-4 sm:p-6">
               <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-                Somewhere between debating song choices, disagreeing over food, and 
-                having our fair share of silly arguments, we realise that building a 
-                life together is really about making a hundred little decisions 
-                choosing each other's happiness through every single one, and trusting God to guide us along the way.
+                From matching PJs to late-night soccer matches on TV and playful 
+                arguments over the remote, we've shared the kind of moments that 
+                make life ours. Through the ups and downs, the laughter and the 
+                challenges, we've grown together, held on to each other, and found 
+                our way through it all.
               </p>
             </div>
 
             <div className="rounded-2xl border border-gold-100 bg-gold-50/50 p-4 sm:p-6">
               <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-                Through the ups and downs, the laughter and the chaos, we've created 
-                countless memories and grown together along the way. It may not always 
-                be perfect, but it's our kind of perfect — and we wouldn't want to 
-                do this adventure with anyone else.
+                What started as two people finding their way to each other has become 
+                a journey filled with love, laughter, memories, and countless little 
+                moments that we'll cherish forever.
               </p>
             </div>
 

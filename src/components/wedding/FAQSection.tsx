@@ -8,23 +8,23 @@ const faqs = [
     a: "Please observe decorum with silence and modest dressing for our wedding mass. For the reception, smart casual — look good, feel comfortable! We'd love to see touches of lavender or gold if you're feeling it.",
   },
   {
-    q: "Can I bring a plus one? 💑",
+    q: "Can I bring a plus one?",
     a: "If your invitation says 'and guest', absolutely! If you're unsure, just reach out to us.",
   },
   {
-    q: "Will there be food and drinks? 🍽️",
+    q: "Will there be food and drinks?",
     a: "Oh yes. Dinner, drinks, cake — the works. Let us know about any dietary needs in your RSVP!",
   },
   {
-    q: "Is there parking? 🚗",
+    q: "Is there parking?",
     a: "Details coming soon! We'll share parking info and directions closer to the date.",
   },
   {
-    q: "Can I take photos? 📸",
+    q: "Can I take photos?",
     a: "During the ceremony, we'd love for you to be present (unplugged ceremony). But at the reception? Snap away! Use #GerfoundhisStace so we can find them!",
   },
   {
-    q: "What time should I arrive? ⏰",
+    q: "What time should I arrive?",
     a: "Please arrive 15-20 minutes before the ceremony starts. Times will be confirmed closer to the date.",
   },
 ];
@@ -42,7 +42,7 @@ const FAQSection = () => {
       >
         <div className="mb-8 text-center sm:mb-14">
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-lavender-400 sm:text-sm sm:tracking-[0.2em]">
-            Got questions? We've got answers 🤔
+            Got questions? We've got answers
           </p>
           <h2 className="mt-2 font-display text-3xl font-bold text-gray-800 sm:mt-3 sm:text-4xl md:text-5xl">
             FAQ

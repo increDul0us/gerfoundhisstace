@@ -1,3 +1,4 @@
+import { Heart } from "lucide-react";
 import photo14 from "../../assets/gallery/photo-14.jpg";
 
 const QuoteSection = () => {
@@ -16,7 +17,7 @@ const QuoteSection = () => {
 
       {/* Quote */}
       <div className="relative z-10 flex flex-col items-center px-6 text-center text-white">
-        <span className="mb-5 text-5xl opacity-80 drop-shadow">💜</span>
+        <Heart className="mb-5 h-10 w-10 fill-white text-white opacity-80 drop-shadow" />
         <blockquote className="max-w-2xl drop-shadow-lg">
           <p className="font-display text-2xl font-medium italic leading-relaxed md:text-[2.25rem]">
             "Two are better than one, because they have a good reward for their toil."

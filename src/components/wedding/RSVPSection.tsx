@@ -1,53 +1,6 @@
-import { useState, useEffect } from "react";
-import { Heart, Send } from "lucide-react";
+import { useState } from "react";
+import { Heart, Send, PartyPopper } from "lucide-react";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
-
-const CONFETTI_EMOJIS = ["🎉", "💜", "🌸", "✨", "💛", "🎊", "💍", "🥂", "🌟", "💝"];
-
-interface ConfettiPiece {
-  id: number;
-  emoji: string;
-  left: number;
-  animDuration: number;
-  delay: number;
-  size: number;
-}
-
-const ConfettiOverlay = () => {
-  const [pieces, setPieces] = useState<ConfettiPiece[]>([]);
-
-  useEffect(() => {
-    const generated = Array.from({ length: 30 }, (_, i) => ({
-      id: i,
-      emoji: CONFETTI_EMOJIS[i % CONFETTI_EMOJIS.length],
-      left: Math.random() * 100,
-      animDuration: 2.5 + Math.random() * 2,
-      delay: Math.random() * 1.5,
-      size: 18 + Math.floor(Math.random() * 20),
-    }));
-    setPieces(generated);
-  }, []);
-
-  return (
-    <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">
-      {pieces.map((p) => (
-        <span
-          key={p.id}
-          className="absolute top-0 animate-confetti-fall"
-          style={{
-            left: `${p.left}%`,
-            fontSize: `${p.size}px`,
-            animationDuration: `${p.animDuration}s`,
-            animationDelay: `${p.delay}s`,
-            animationFillMode: "forwards",
-          }}
-        >
-          {p.emoji}
-        </span>
-      ))}
-    </div>
-  );
-};
 
 const RSVPSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -75,10 +28,9 @@ const RSVPSection = () => {
   if (submitted) {
     return (
       <section id="rsvp" className="bg-lavender-50 py-24">
-        <ConfettiOverlay />
         <div className="container mx-auto px-6 text-center">
           <div className="mx-auto max-w-md rounded-3xl border border-lavender-200 bg-white p-10 shadow-lg">
-            <span className="mb-4 block text-5xl">🎉</span>
+            <PartyPopper className="mx-auto mb-4 h-12 w-12 text-lavender-400" />
             <h3 className="font-display text-3xl font-bold text-gray-800">
               You're In!
             </h3>
@@ -105,7 +57,7 @@ const RSVPSection = () => {
       >
         <div className="mb-14 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
-            Let us know you're coming! 💌
+            Let us know you're coming!
           </p>
           <h2 className="mt-3 font-display text-4xl font-bold text-gray-800 md:text-5xl">
             RSVP
@@ -155,8 +107,8 @@ const RSVPSection = () => {
             </label>
             <div className="flex gap-3">
               {[
-                { value: "yes", label: "Yes! 🎉", bg: "bg-lavender-50 border-lavender-400 text-lavender-600" },
-                { value: "no", label: "Can't make it 😢", bg: "bg-gray-50 border-gray-300 text-gray-600" },
+                { value: "yes", label: "Yes!", bg: "bg-lavender-50 border-lavender-400 text-lavender-600" },
+                { value: "no", label: "Can't make it", bg: "bg-gray-50 border-gray-300 text-gray-600" },
               ].map((opt) => (
                 <label
                   key={opt.value}
@@ -213,7 +165,7 @@ const RSVPSection = () => {
 
           <div>
             <label className="mb-1.5 block text-sm font-semibold text-gray-700">
-              Leave a Message 💛
+              Leave a Message
             </label>
             <textarea
               name="message"
