@@ -12,11 +12,11 @@ import photo6 from "../assets/gallery/photo-6.jpg";
 import photo7 from "../assets/gallery/photo-7.jpg";
 import photo8 from "../assets/gallery/photo-8.jpg";
 import photo9 from "../assets/gallery/photo-9.jpg";
-import photo10 from "../assets/gallery/photo-10.jpg";
 import photo11 from "../assets/gallery/photo-11.jpg";
 import photo12 from "../assets/gallery/photo-12.jpg";
 import photo13 from "../assets/gallery/photo-13.jpg";
 import photo15 from "../assets/gallery/photo-15.jpg";
+import photo14 from "../assets/gallery/photo-14.jpg";
 import photo16 from "../assets/gallery/photo-16.jpg";
 import photo17 from "../assets/gallery/photo-17.jpg";
 
@@ -31,11 +31,11 @@ const sets: PhotoSet[] = [
     title: "On the Pitch",
     emoji: "⚽",
     photos: [
-      { src: photo10, alt: "Kiss in Arsenal kits" },
       { src: photo11, alt: "Smiling with football" },
       { src: photo12, alt: "Foreheads together" },
       { src: photo13, alt: "Sitting together with football" },
       { src: photo15, alt: "Back to back" },
+      { src: photo14, alt: "Kiss in jerseys" },
     ],
   },
   {
