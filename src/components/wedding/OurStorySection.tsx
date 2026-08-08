@@ -39,35 +39,26 @@ const OurStorySection = () => {
           {/* Story */}
           <div className="space-y-6">
             <div className="rounded-2xl border border-lavender-100 bg-lavender-50/50 p-6">
-              <h3 className="mb-2 font-display text-xl font-semibold text-gray-800">
-                The Beginning ✨
-              </h3>
               <p className="text-gray-600 leading-relaxed">
-                Some love stories start with a grand gesture. Ours? Not so much. 
-                But from the moment we met, something just clicked — like we'd known 
-                each other in a past life (or at least a past group chat).
+                From matching PJs and late-night soccer nights to playful arguments 
+                over the remote, we've shared the kind of moments that make life ours. 
+                Through the ups and downs, the laughter and the challenges, we've grown 
+                together, held on to each other, and found our way through it all.
               </p>
             </div>
 
             <div className="rounded-2xl border border-gold-100 bg-gold-50/50 p-6">
-              <h3 className="mb-2 font-display text-xl font-semibold text-gray-800">
-                The Adventure 🌍
-              </h3>
               <p className="text-gray-600 leading-relaxed">
-                From matching PJs and late-night hangs to soccer nights and playful 
-                arguments over the remote — every moment has been an adventure. We've 
-                laughed more than we thought possible, and we're just getting started.
+                What started as two people finding their way to each other has become 
+                a journey filled with love, laughter, memories, and countless little 
+                moments that we'll cherish forever.
               </p>
             </div>
 
             <div className="rounded-2xl border border-lavender-100 bg-lavender-50/50 p-6">
-              <h3 className="mb-2 font-display text-xl font-semibold text-gray-800">
-                The Forever 💍
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                And now we're making it official. Because when you find someone who 
-                ties your Converse with "Forever" written on them... you keep them. 
-                Forever.
+              <p className="text-gray-600 leading-relaxed text-lg font-display italic text-gray-700">
+                And now, as we begin this next chapter, we know this is only the 
+                beginning of our greatest adventure yet.
               </p>
             </div>
           </div>
