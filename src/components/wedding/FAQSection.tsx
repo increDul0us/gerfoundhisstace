@@ -5,7 +5,7 @@ import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 const faqs = [
   {
     q: "What should I wear?",
-    a: "Please observe decorum with silence and modest dressing for our wedding mass. For the reception, smart casual — look good, feel comfortable! We'd love to see touches of lavender or gold if you're feeling it.",
+    a: "Please observe decorum with silence and modest dressing for our wedding mass. For the reception, smart casual — look good, feel comfortable! We'd love to see touches of gold if you're feeling it.",
   },
   {
     q: "Can I bring a plus one?",
