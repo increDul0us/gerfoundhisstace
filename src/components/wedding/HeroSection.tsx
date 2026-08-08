@@ -1,6 +1,6 @@
 import { ChevronDown, Heart } from "lucide-react";
 import { COUPLE_NAME_1, COUPLE_NAME_2, WEDDING_DATE_LABEL, WEDDING_LOCATION_LABEL } from "../../lib/wedding";
-import heroImg from "../../assets/gallery/photo-1.jpg";
+import heroImg from "../../assets/gallery/photo-hero.jpg";
 
 const HeroSection = () => {
   return (
