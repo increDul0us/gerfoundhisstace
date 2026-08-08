@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+import { Heart, Volume2 } from "lucide-react";
 import { COUPLE_NAME_1, COUPLE_NAME_2, WEDDING_DATE_LABEL } from "../../lib/wedding";
 import heroImg from "../../assets/gallery/photo-hero.jpg";
 
@@ -44,11 +44,11 @@ const WelcomeSplash = ({ onEnter }: WelcomeSplashProps) => {
             onClick={onEnter}
             className="mt-6 rounded-full bg-lavender-400 px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] text-white shadow-xl shadow-lavender-500/30 transition-all hover:bg-lavender-500 hover:shadow-2xl active:scale-95 sm:mt-10 sm:px-10 sm:py-4 sm:text-sm sm:tracking-[0.15em]"
           >
-            Celebrate With Us 🎉
+            Celebrate With Us
           </button>
 
           <p className="mt-3 text-[10px] text-white/40 sm:mt-4 sm:text-xs">
-            🔊 Turn your sound on
+            <Volume2 className="mr-1 inline-block h-3 w-3" /> Turn your sound on
           </p>
         </div>
       </div>

@@ -1,17 +1,17 @@
-import { MapPin, Clock } from "lucide-react";
+import { MapPin, Clock, Church, Wine } from "lucide-react";
 import { CEREMONY, RECEPTION } from "../../lib/wedding";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 const events = [
   {
     ...CEREMONY,
-    icon: "💒",
+    icon: <Church className="h-6 w-6 text-lavender-500" />,
     gradient: "from-lavender-50 to-white",
     border: "border-lavender-200",
   },
   {
     ...RECEPTION,
-    icon: "🥂",
+    icon: <Wine className="h-6 w-6 text-gold" />,
     gradient: "from-gold-50 to-white",
     border: "border-gold-200",
   },
@@ -33,7 +33,7 @@ const EventSchedule = () => {
             Saturday, 28 November 2026
           </p>
           <h2 className="mt-2 font-display text-3xl font-bold text-gray-800 sm:mt-3 sm:text-4xl md:text-5xl">
-            The Big Day 🎉
+            The Big Day
           </h2>
           <p className="mx-auto mt-2 max-w-md text-sm text-gray-500 sm:mt-3 sm:text-base">
             Here's what's going down. Come ready to celebrate!
@@ -46,7 +46,7 @@ const EventSchedule = () => {
               key={event.title}
               className={`rounded-2xl border ${event.border} bg-gradient-to-br ${event.gradient} p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg sm:rounded-3xl sm:p-8`}
             >
-              <div className="mb-3 text-3xl sm:mb-4 sm:text-4xl">{event.icon}</div>
+              <div className="mb-3 sm:mb-4">{event.icon}</div>
 
               <h3 className="font-display text-xl font-bold text-gray-800 sm:text-2xl">
                 {event.title}

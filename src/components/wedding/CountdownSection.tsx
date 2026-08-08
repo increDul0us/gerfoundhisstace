@@ -23,10 +23,10 @@ const CountdownSection = () => {
   }, []);
 
   const units = [
-    { label: "Days", value: timeLeft.days, emoji: "📅" },
-    { label: "Hours", value: timeLeft.hours, emoji: "⏰" },
-    { label: "Minutes", value: timeLeft.minutes, emoji: "⏱️" },
-    { label: "Seconds", value: timeLeft.seconds, emoji: "💫" },
+    { label: "Days", value: timeLeft.days },
+    { label: "Hours", value: timeLeft.hours },
+    { label: "Minutes", value: timeLeft.minutes },
+    { label: "Seconds", value: timeLeft.seconds },
   ];
 
   return (
@@ -38,7 +38,7 @@ const CountdownSection = () => {
         }`}
       >
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold sm:text-sm sm:tracking-[0.2em]">
-          Counting down to forever ✨
+          Counting down to forever
         </p>
         <h2 className="mt-2 font-display text-2xl font-bold text-gray-800 sm:mt-3 sm:text-3xl md:text-4xl">
           {WEDDING_DATE_LABEL}
@@ -53,7 +53,6 @@ const CountdownSection = () => {
               key={unit.label}
               className="group rounded-2xl border border-lavender-100 bg-white p-4 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-lavender-100 sm:rounded-3xl sm:p-6"
             >
-              <span className="mb-1 block text-lg sm:mb-2 sm:text-2xl">{unit.emoji}</span>
               <span className="block font-display text-3xl font-bold text-lavender-500 sm:text-5xl">
                 {String(unit.value).padStart(2, "0")}
               </span>

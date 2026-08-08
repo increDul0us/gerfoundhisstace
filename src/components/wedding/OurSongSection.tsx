@@ -17,7 +17,7 @@ const OurSongSection = () => {
         <div className="mx-auto max-w-md text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-lavender-50 px-4 py-2 text-sm font-semibold text-lavender-500">
             <Music className="h-4 w-4" />
-            Our Song 🎶
+            Our Song
           </div>
 
           <h3 className="font-display text-2xl font-bold text-gray-800">

@@ -27,7 +27,7 @@ const GalleryPreview = () => {
           }`}
         >
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
-            Memories we love 📸
+            Memories we love
           </p>
           <h2 className="mt-3 font-display text-4xl font-bold text-gray-800 md:text-5xl">
             Our Gallery

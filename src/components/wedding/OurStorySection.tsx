@@ -14,7 +14,7 @@ const OurStorySection = () => {
       >
         <div className="mb-8 text-center sm:mb-14">
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-lavender-400 sm:text-sm sm:tracking-[0.2em]">
-            How it all began 💜
+            How it all began
           </p>
           <h2 className="mt-2 font-display text-3xl font-bold text-gray-800 sm:mt-3 sm:text-4xl md:text-5xl">
             Our Story
