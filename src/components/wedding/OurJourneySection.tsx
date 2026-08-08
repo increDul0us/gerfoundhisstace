@@ -14,7 +14,7 @@ const milestones = [
   {
     date: "September 29, 2023",
     title: "First Date",
-    description: "Five days later, we knew we had to see each other again.",
+    description: "Six days later, we knew we had to see each other again.",
     icon: Heart,
     color: "text-pink-500",
     bg: "bg-pink-50",
