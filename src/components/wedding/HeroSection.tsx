@@ -55,7 +55,7 @@ const HeroSection = () => {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <a
                 href="#rsvp"
-                className="rounded-full bg-lavender-400 px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-lavender-500/30 transition-all hover:bg-lavender-500 hover:shadow-xl hover:shadow-lavender-500/40 sm:px-10"
+                className="animate-pulse-glow rounded-full bg-lavender-400 px-8 py-4 text-sm font-bold text-white shadow-lg shadow-lavender-500/30 transition-all hover:bg-lavender-500 hover:shadow-xl hover:shadow-lavender-500/40 sm:px-10 sm:py-3.5"
               >
                 RSVP Now 💌
               </a>

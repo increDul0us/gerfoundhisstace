@@ -3,11 +3,12 @@ import HeroSection from "../components/wedding/HeroSection";
 import CountdownSection from "../components/wedding/CountdownSection";
 import OurStorySection from "../components/wedding/OurStorySection";
 import GalleryPreview from "../components/wedding/GalleryPreview";
+import QuoteSection from "../components/wedding/QuoteSection";
 import EventSchedule from "../components/wedding/EventSchedule";
 import RSVPSection from "../components/wedding/RSVPSection";
 import FAQSection from "../components/wedding/FAQSection";
 import { COUPLE_NAME_1, COUPLE_NAME_2, HASHTAG, CONTACT_EMAIL, WEDDING_DATE_LABEL, WEDDING_LOCATION_LABEL } from "../lib/wedding";
-import { Heart } from "lucide-react";
+import { Heart, Instagram } from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
       <CountdownSection />
       <OurStorySection />
       <GalleryPreview />
+      <QuoteSection />
       <EventSchedule />
       <RSVPSection />
       <FAQSection />
@@ -37,7 +39,21 @@ const HomePage = () => {
           >
             {CONTACT_EMAIL}
           </a>
-          <p className="mt-6 text-xs text-gray-300">
+
+          {/* Social placeholder */}
+          <div className="mt-5 flex items-center justify-center gap-3">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-lavender-100 text-lavender-500 transition-all hover:bg-lavender-400 hover:text-white"
+            >
+              <Instagram className="h-4 w-4" />
+            </a>
+          </div>
+
+          <p className="mt-6 text-xs text-gray-400">
             Made with 💜 and a whole lot of love
           </p>
         </div>

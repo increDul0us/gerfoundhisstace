@@ -9,10 +9,10 @@ import photo2 from "../../assets/gallery/photo-2.jpg";
 import photo3 from "../../assets/gallery/photo-3.jpg";
 
 const previewPhotos = [
-  { src: photo10, alt: "Arsenal kiss", span: "col-span-2 row-span-2" },
+  { src: photo10, alt: "Arsenal kiss", span: "col-span-2 row-span-2", featured: true },
   { src: photo6, alt: "Forever Converse", span: "" },
   { src: photo3, alt: "Matching PJs", span: "" },
-  { src: photo15, alt: "Back to back on the pitch", span: "col-span-2" },
+  { src: photo15, alt: "Back to back on the pitch", span: "col-span-2", wide: true },
   { src: photo16, alt: "Pillow fight", span: "" },
   { src: photo2, alt: "Couple portrait", span: "" },
 ];
@@ -22,13 +22,12 @@ const GalleryPreview = () => {
 
   return (
     <section id="gallery" className="bg-lavender-50 py-24">
-      <div
-        ref={ref}
-        className={`container mx-auto px-6 transition-all duration-700 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}
-      >
-        <div className="mb-14 text-center">
+      <div ref={ref} className="container mx-auto px-6">
+        <div
+          className={`mb-14 text-center transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
             Memories we love 📸
           </p>
@@ -41,24 +40,35 @@ const GalleryPreview = () => {
         </div>
 
         <div className="mx-auto grid max-w-4xl grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-          {previewPhotos.map((photo, i) => (
-            <div
-              key={i}
-              className={`group overflow-hidden rounded-2xl ${photo.span}`}
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                transition: `all 0.5s ease-out ${i * 120}ms`,
-              }}
-            >
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                className="aspect-square h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-          ))}
+          {previewPhotos.map((photo, i) => {
+            const isFeatured = !!photo.featured;
+            const isWide = !!photo.wide && !isFeatured;
+
+            return (
+              <div
+                key={i}
+                className={`group relative overflow-hidden rounded-2xl ${photo.span} ${
+                  isFeatured
+                    ? "aspect-[4/3] md:aspect-auto"
+                    : isWide
+                    ? "aspect-[4/3] md:aspect-[2/1]"
+                    : "aspect-[4/3]"
+                }`}
+                style={{
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible ? "translateY(0)" : "translateY(20px)",
+                  transition: `opacity 0.5s ease-out ${i * 120}ms, transform 0.5s ease-out ${i * 120}ms`,
+                }}
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            );
+          })}
         </div>
 
         <div className="mt-10 text-center">
