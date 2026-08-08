@@ -10,7 +10,6 @@ const RSVPSection = () => {
     email: "",
     attending: "",
     guests: "0",
-    dietary: "",
     message: "",
   });
 
@@ -149,19 +148,6 @@ const RSVPSection = () => {
             </select>
           </div>
 
-          <div>
-            <label className="mb-1.5 block text-sm font-semibold text-gray-700">
-              Dietary Requirements
-            </label>
-            <input
-              type="text"
-              name="dietary"
-              value={formData.dietary}
-              onChange={handleChange}
-              className="w-full rounded-xl border border-lavender-200 px-4 py-3 text-sm outline-none transition-all focus:border-lavender-400 focus:ring-2 focus:ring-lavender-100"
-              placeholder="Vegetarian, allergies, etc."
-            />
-          </div>
 
           <div>
             <label className="mb-1.5 block text-sm font-semibold text-gray-700">
