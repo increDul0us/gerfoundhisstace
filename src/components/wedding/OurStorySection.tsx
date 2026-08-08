@@ -31,7 +31,7 @@ const OurStorySection = () => {
             />
             <div className="absolute -bottom-3 -right-3 rounded-2xl border-4 border-white bg-lavender-100 px-4 py-2 shadow-md">
               <span className="font-display text-lg font-semibold text-lavender-600">
-                Ger found his Stace 💛
+                #GerfoundhisStace
               </span>
             </div>
           </div>
