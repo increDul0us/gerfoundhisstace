@@ -52,7 +52,7 @@ const sets: PhotoSet[] = [
   },
   {
     title: "Us Being Us",
-    emoji: "💜",
+    emoji: "",
     photos: [
       { src: photo1, alt: "Together" },
       { src: photo2, alt: "Couple portrait" },
@@ -78,7 +78,7 @@ const GalleryPage = () => {
           Back to Home
         </Link>
         <h1 className="font-display text-4xl font-bold text-gray-800 md:text-5xl">
-          Our Gallery 📸
+          Our Gallery
         </h1>
         <p className="mx-auto mt-3 max-w-md text-gray-500">
           All our favourite moments — organised by vibe. Tag your posts with{" "}
@@ -142,7 +142,7 @@ const GalleryPage = () => {
       {/* Footer */}
       <div className="border-t border-lavender-100 bg-lavender-50 py-8 text-center">
         <p className="text-sm text-gray-400">
-          {HASHTAG} · Made with 💜
+          {HASHTAG} · Made with love
         </p>
       </div>
 

@@ -54,7 +54,7 @@ const HomePage = () => {
             {CONTACT_EMAIL}
           </a>
           <p className="mt-6 text-xs text-gray-300">
-            Made with 💜 and a whole lot of love
+            Made with love
           </p>
         </div>
       </footer>
