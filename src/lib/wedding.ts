@@ -2,7 +2,7 @@ export const COUPLE_NAME_1 = "Stacee-Ann";
 export const COUPLE_NAME_2 = "Gerard";
 export const COUPLE_FULL = "Stacee-Ann & Gerard Gautam";
 export const HASHTAG = "#GerfoundhisStace";
-export const CONTACT_EMAIL = "staceandgerard@email.com";
+export const CONTACT_EMAIL = "GerfoundhisStace@gmail.com";
 
 export const WEDDING_DATE = new Date("2026-11-28T12:00:00").getTime();
 export const WEDDING_DATE_LABEL = "Saturday, 28 November 2026";

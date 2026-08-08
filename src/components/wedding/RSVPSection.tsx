@@ -1,21 +1,55 @@
 import { useState } from "react";
-import { Heart, Send, PartyPopper } from "lucide-react";
+import { Heart, Send, PartyPopper, Loader2 } from "lucide-react";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+
+const WEB3FORMS_KEY = "ff505899-7bf3-47d7-a581-0a98e2b09e87";
 
 const RSVPSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     attending: "",
-    guests: "0",
+    guests: "1",
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `Wedding RSVP: ${formData.name} — ${formData.attending === "yes" ? "Attending" : "Not attending"}`,
+          from_name: "Wedding RSVP",
+          name: formData.name,
+          email: formData.email,
+          attending: formData.attending === "yes" ? "Yes" : "No",
+          guests: formData.guests,
+          message: formData.message || "(no message)",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Could not send your RSVP. Please check your connection and try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -47,28 +81,28 @@ const RSVPSection = () => {
   }
 
   return (
-    <section id="rsvp" className="bg-lavender-50 py-24">
+    <section id="rsvp" className="bg-lavender-50 py-14 sm:py-24">
       <div
         ref={ref}
-        className={`container mx-auto px-6 transition-all duration-700 ${
+        className={`container mx-auto px-4 transition-all duration-700 sm:px-6 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <div className="mb-14 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+        <div className="mb-8 text-center sm:mb-14">
+          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold sm:text-sm sm:tracking-[0.2em]">
             Let us know you're coming!
           </p>
-          <h2 className="mt-3 font-display text-4xl font-bold text-gray-800 md:text-5xl">
+          <h2 className="mt-2 font-display text-3xl font-bold text-gray-800 sm:mt-3 sm:text-4xl md:text-5xl">
             RSVP
           </h2>
-          <p className="mx-auto mt-3 max-w-md text-gray-500">
+          <p className="mx-auto mt-2 max-w-md text-sm text-gray-500 sm:mt-3 sm:text-base">
             We'd love to have you there. Fill this out so we know how many plates to stack!
           </p>
         </div>
 
         <form
           onSubmit={handleSubmit}
-          className="mx-auto max-w-lg space-y-5 rounded-3xl border border-lavender-100 bg-white p-8 shadow-sm md:p-10"
+          className="mx-auto max-w-lg space-y-5 rounded-3xl border border-lavender-100 bg-white p-6 shadow-sm sm:p-8 md:p-10"
         >
           <div>
             <label className="mb-1.5 block text-sm font-semibold text-gray-700">
@@ -148,7 +182,6 @@ const RSVPSection = () => {
             </select>
           </div>
 
-
           <div>
             <label className="mb-1.5 block text-sm font-semibold text-gray-700">
               Leave a Message
@@ -163,11 +196,20 @@ const RSVPSection = () => {
             />
           </div>
 
+          {error && (
+            <p className="text-sm text-red-500">{error}</p>
+          )}
+
           <button
             type="submit"
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-lavender-400 py-3.5 text-sm font-bold text-white shadow-lg shadow-lavender-200 transition-all hover:bg-lavender-500 hover:shadow-xl"
+            disabled={submitting}
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-lavender-400 py-3.5 text-sm font-bold text-white shadow-lg shadow-lavender-200 transition-all hover:bg-lavender-500 hover:shadow-xl disabled:opacity-60"
           >
-            Send RSVP <Send className="h-4 w-4" />
+            {submitting ? (
+              <>Sending... <Loader2 className="h-4 w-4 animate-spin" /></>
+            ) : (
+              <>Send RSVP <Send className="h-4 w-4" /></>
+            )}
           </button>
         </form>
       </div>
