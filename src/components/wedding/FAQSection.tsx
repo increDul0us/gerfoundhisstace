@@ -8,10 +8,6 @@ const faqs = [
     a: "Please observe decorum with silence and modest dressing for our wedding mass. For the reception, smart casual — look good, feel comfortable! We'd love to see touches of gold if you're feeling it.",
   },
   {
-    q: "Can I bring a plus one?",
-    a: "If your invitation says 'and guest', absolutely! If you're unsure, just reach out to us.",
-  },
-  {
     q: "Will there be food and drinks?",
     a: "Oh yes. Dinner, drinks, cake — the works.",
   },
